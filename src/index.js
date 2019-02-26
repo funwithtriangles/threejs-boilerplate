@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 
-import { scene, camera, composer, clock, stats } from './setup'
+import { scene, camera, composer, startAnimation } from './setup'
 import { BloomEffect, EffectPass } from 'postprocessing'
 
 // Scene
@@ -14,17 +14,8 @@ const effectPass = new EffectPass(camera, new BloomEffect())
 effectPass.renderToScreen = true
 composer.addPass(effectPass)
 
-const animate = () => {
-  stats.begin()
-  const delta = clock.getDelta()
-  const deltaFPS = delta * 60
-  window.requestAnimationFrame(animate)
-
-  mesh.rotation.y += 0.01 * deltaFPS
-
-  composer.render(delta)
-
-  stats.end()
-}
-
-animate()
+// Animate
+startAnimation((f) => {
+  // f value is frames passed
+  mesh.rotation.y += 0.01 * f
+})

@@ -28,6 +28,23 @@ const resize = () => {
   renderer.setSize(window.innerWidth, window.innerHeight)
 }
 
+export const startAnimation = (cb) => {
+  const animate = () => {
+    window.requestAnimationFrame(animate)
+    stats.begin()
+    const delta = clock.getDelta()
+    const deltaFPS = delta * 60
+
+    cb(deltaFPS)
+
+    composer.render(delta)
+
+    stats.end()
+  }
+
+  animate()
+}
+
 window.addEventListener('resize', resize)
 
 document.body.appendChild(renderer.domElement)
