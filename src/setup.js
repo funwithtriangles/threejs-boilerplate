@@ -2,7 +2,7 @@ import './style.css'
 import * as THREE from 'three'
 import OrbitControlsModule from 'three-orbit-controls'
 import { EffectComposer, RenderPass } from 'postprocessing'
-import { Stats } from 'stats'
+import Stats from 'stats.js'
 
 const OrbitControls = OrbitControlsModule(THREE)
 
