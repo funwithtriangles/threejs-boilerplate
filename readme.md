@@ -1,6 +1,7 @@
 # three.js boilerplate
 Get going quickly with three.js. Includes:
 
-- auto refreshing (webpack-dev-server)
-- eslint (standard, modified)
+- auto refresh (webpack-dev-server)
+- post processing
 - glslify
+- eslint (standard, modified)
