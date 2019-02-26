@@ -12,6 +12,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "postprocessing": "^5.6.0",
+    "stats": "^1.0.0",
     "three": "^0.101.1",
     "three-orbit-controls": "^82.1.0"
   },
