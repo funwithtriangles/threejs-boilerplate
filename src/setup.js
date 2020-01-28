@@ -1,10 +1,8 @@
 import './style.css'
 import * as THREE from 'three'
-import OrbitControlsModule from 'three-orbit-controls'
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { EffectComposer, RenderPass } from 'postprocessing'
 import Stats from 'stats.js'
-
-const OrbitControls = OrbitControlsModule(THREE)
 
 export const renderer = new THREE.WebGLRenderer({ antialias: true })
 renderer.setSize(window.innerWidth, window.innerHeight)
@@ -51,4 +49,4 @@ document.body.appendChild(renderer.domElement)
 document.body.appendChild(stats.dom)
 
 // eslint-disable-next-line no-new
-new OrbitControls(camera)
+new OrbitControls(camera, renderer.domElement)

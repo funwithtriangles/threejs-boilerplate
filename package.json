@@ -12,10 +12,9 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "postprocessing": "^5.6.0",
+    "postprocessing": "^6.10.0",
     "stats.js": "^0.17.0",
-    "three": "^0.101.1",
-    "three-orbit-controls": "^82.1.0"
+    "three": "^0.112.1"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
