@@ -14,7 +14,7 @@
   "dependencies": {
     "postprocessing": "^6.10.0",
     "stats.js": "^0.17.0",
-    "three": "^0.112.1"
+    "three": "^0.137.0"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
